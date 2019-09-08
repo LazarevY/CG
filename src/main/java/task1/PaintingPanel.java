@@ -1,5 +1,7 @@
 package task1;
 
+import common.InverseColor;
+import common.NightColor;
 import common.RandomRange;
 
 import javax.swing.*;
@@ -44,6 +46,8 @@ public class PaintingPanel extends JPanel {
         Graphics2D g2 = (Graphics2D)g;
         g2.setStroke(new BasicStroke(2));
 
+        g2.scale((double) super.getWidth()/WIDTH, (double)super.getHeight()/HEIGHT);
+
         paintCloud(300, 100, 60, g);
         paintCloud(600, 200, 25, g);
 
@@ -71,7 +75,7 @@ public class PaintingPanel extends JPanel {
         }
         paintChamomile(200, 600, 20 , g2);
 
-        g.setColor(Color.black);
+        g.setColor(new Color(0,0,0));
 
 
         paintEagle(400, 100, 120, 40, 60, 4, g2);
@@ -91,7 +95,7 @@ public class PaintingPanel extends JPanel {
 
         g.setColor(new Color(150, 75,0));
         g.fillRect(x - rootHWidth,y , rootHWidth * 2, rootY - y);
-        g.setColor(Color.green);
+        g.setColor(new Color(0, 255, 0));
         fillCircle(x, y, halfWidth*3,g);
         fillCircle(x + halfWidth, y + heigth, halfWidth*3,g);
         fillCircle(x - halfWidth, y + heigth, halfWidth*3,g);
@@ -150,7 +154,7 @@ public class PaintingPanel extends JPanel {
 
     void paintChamomile(int x, int y, int coreRadius, Graphics2D g){
         Color save = g.getColor();
-        g.setColor(Color.white);
+        g.setColor(new Color(255,255,255));
         for (int a = 0; a < 360; a+= 60) {
             double v_x = Math.cos(Math.toRadians(a));
             double v_y = Math.sin(Math.toRadians(a));
