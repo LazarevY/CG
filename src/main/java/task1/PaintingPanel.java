@@ -73,7 +73,7 @@ public class PaintingPanel extends JPanel {
             paintChamomile(r.getOfRange(10, 1270), r.getOfRange(600, HEIGHT -10),
                     r.getOfRange(16,21), g2);
         }
-        paintChamomile(200, 600, 20 , g2);
+        //paintChamomile(200, 600, 20 , g2);
 
         g.setColor(new Color(0,0,0));
 
