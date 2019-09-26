@@ -59,8 +59,8 @@ public class Matrix3x3 {
     }
 
     public static Matrix3x3 rotate(Matrix3x3 matrix3x3, double angle) {
-        double cost = Math.cos(angle);
-        double sint = Math.sin(angle);
+        double cost = Math.cos(Math.toRadians(angle));
+        double sint = Math.sin(Math.toRadians(angle));
 
         Matrix3x3 matrix = new Matrix3x3(matrix3x3);
 
@@ -76,8 +76,8 @@ public class Matrix3x3 {
     }
 
     public static Matrix3x3 rotate(double angle) {
-        double cost = Math.cos(angle);
-        double sint = Math.sin(angle);
+        double cost = Math.cos(Math.toRadians(angle));
+        double sint = Math.sin(Math.toRadians(angle));
 
         return new Matrix3x3(cost, -sint, 0,
                 sint, cost, 0,
